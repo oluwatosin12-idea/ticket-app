@@ -15,7 +15,7 @@ class AppDoubleText extends StatelessWidget {
         Text(bigText, style: AppStyles.headLine3,),
         InkWell(
           onTap:() {
-            print('inkwell tapped');
+            print('View All tapped');
          },
           child: Text(smallText, style: AppStyles.textStyle.copyWith(
             color: AppStyles.primaryColor

@@ -27,34 +27,7 @@ List<Map<String, dynamic>> ticketList = [
     'departure_time':"09:00 AM",
     "number":45
   },
-  {
-    'from': {
-      'code':"NGR",
-      'name':"Nigeria"
-    },
-    'to': {
-      'code':"GHA",
-      'name':"Ghana"
-    },
-    'flying_time': '4H 20M',
-    'date': "10 MAY",
-    'departure_time':"10:00 PM",
-    "number":45
-  },
-  {
-    'from': {
-      'code':"AUS",
-      'name':"Australia"
-    },
-    'to': {
-      'code':"CAD",
-      'name':"CANADA"
-    },
-    'flying_time': '4H 20M',
-    'date': "10 MAY",
-    'departure_time':"09:00 AM",
-    "number":45
-  },
+
 ];
 class AppRoutes{
   static const homePage = "/";

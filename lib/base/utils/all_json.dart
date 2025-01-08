@@ -22,22 +22,37 @@ List<Map<String, dynamic>> ticketList = [
       'code':"SH",
       'name':"Shanghai"
     },
-    'flying_time': '4H 20M',
+    'flying_time': '10H 20M',
     'date': "10 MAY",
-    'departure_time':"09:00 AM",
+    'departure_time':"12:00 PM",
     "number":45
   },
-
+  {
+    'from': {
+      'code':"NGR",
+      'name':"Nigeria"
+    },
+    'to': {
+      'code':"FRA",
+      'name':"France"
+    },
+    'flying_time': '5H 20M',
+    'date': "20 JAN",
+    'departure_time':"10:45 AM",
+    "number":34
+  },
+  {
+    'from': {
+      'code':"GHA",
+      'name':"Ghana"
+    },
+    'to': {
+      'code':"LBY",
+      'name':"Libya"
+    },
+    'flying_time': '12H 20M',
+    'date': "10 FEB",
+    'departure_time':"03:10 AM",
+    "number":21
+  },
 ];
-class AppRoutes{
-  static const homePage = "/";
-
-  static const allTickets = "/all_tickets";
-
-  static const ticketScreen = "/ticket_screen";
-
-  static const allHotels = "/all_hotels";
-
-  static const hotelDetail = "/hotel_detail";
-
-}

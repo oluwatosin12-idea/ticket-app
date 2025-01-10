@@ -4,6 +4,7 @@ import 'package:ticket_app/base/res/styles/app_styles.dart';
 import 'package:ticket_app/base/utils/all_json.dart';
 import 'package:ticket_app/base/widgets/app_double_text.dart';
 import 'package:ticket_app/base/widgets/ticket_view.dart';
+import 'package:ticket_app/screens/hotel.dart';
 
 class HomeScreens extends StatelessWidget {
   const HomeScreens({super.key});
@@ -18,6 +19,7 @@ class HomeScreens extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 29),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -49,11 +51,12 @@ class HomeScreens extends StatelessWidget {
                   height: 23,
                 ),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                    color:  const Color(0xFFF4F6FD),
-                     ),
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color(0xFFF4F6FD),
+                  ),
                   child: const Row(
                       //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -63,24 +66,57 @@ class HomeScreens extends StatelessWidget {
                         Text('Search'),
                       ]),
                 ),
-                const SizedBox(height: 40,),
-                const AppDoubleText(bigText: 'Upcoming Flight', smallText: 'View All',),
-                const SizedBox(height: 20,),
+                const SizedBox(
+                  height: 40,
+                ),
+                AppDoubleText(
+                  bigText: 'Upcoming Flight',
+                  smallText: 'View All',
+                  func: ()  {
+                       Navigator.pushNamed(context, 'all_tickets'); },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
                 SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                        children: ticketList.map((singleTicket) => TicketView(ticket: singleTicket,)).toList(),
-                    )
-                    ),
+                      children: ticketList
+                          .map((singleTicket) => TicketView(
+                                ticket: singleTicket,
+                              ))
+                          .toList(),
+                    )),
+                const SizedBox(
+                  height: 40,
+                ),
+                AppDoubleText(
+                  bigText: 'Hotels',
+                  smallText: 'View All',
+                  func:() {
 
+                  },
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                  SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+
+                    children: hotelList
+                        .map((singleHotel) => Hotel(
+                      hotel: singleHotel,
+                    ))
+                        .toList(),
+
+                  ),
+                ),
               ],
             ),
-
           ),
         ],
       ),
     );
   }
 }
-
-

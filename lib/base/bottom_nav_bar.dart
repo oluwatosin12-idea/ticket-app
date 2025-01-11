@@ -1,10 +1,13 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ticket_app/screens/home_screens.dart';
+import 'package:ticket_app/screens/search/search_screen.dart';
+
+
+import '../screens/home/home_screens.dart';
 
 class BottomNavBar extends StatefulWidget {
-   BottomNavBar({super.key});
+   const BottomNavBar({super.key});
 
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();
@@ -13,7 +16,7 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   get appScreens => [
     const  HomeScreens(),
-    const Center(child: Text('Search')),
+    const SearchScreen(),
     const Center(child: Text('Tickets')),
     const Center(child: Text('Profile'))
   ];

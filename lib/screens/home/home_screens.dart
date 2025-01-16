@@ -99,7 +99,7 @@ class HomeScreens extends StatelessWidget {
                 ),
                 const SizedBox(
                   height: 20,),
-                  SingleChildScrollView(
+                SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: hotelList

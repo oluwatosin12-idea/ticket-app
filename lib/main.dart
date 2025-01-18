@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_app/base/bottom_nav_bar.dart';
+import 'package:ticket_app/base/widgets/ticket_view.dart';
 import 'package:ticket_app/screens/home/all_tickets.dart';
+import 'package:ticket_app/screens/tickets/widgets/ticket_screen.dart';
+
+import 'base/widgets/App_Routes.dart';
 
 
 void main() {
@@ -18,7 +22,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       home: BottomNavBar() ,
       routes: {
-        'all_tickets': (context) => const AllTickets(),
+        //AppRoutes.homepage: (context) => const BottomNavBar(),
+        AppRoutes.allTickets: (context) => const AllTickets(),
+        AppRoutes.ticketScreen : (context) => const TicketScreen(),
       }
     );
   }

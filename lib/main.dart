@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: BottomNavBar() ,
+      //home: BottomNavBar() ,
       routes: {
-        //AppRoutes.homepage: (context) => const BottomNavBar(),
+        AppRoutes.homepage: (context) => const BottomNavBar(),
         AppRoutes.allTickets: (context) => const AllTickets(),
         AppRoutes.ticketScreen : (context) => const TicketScreen(),
       }

@@ -18,19 +18,25 @@ class TicketScreen extends StatefulWidget {
 
 class _TicketScreenState extends State<TicketScreen> {
 
+  late int ticketIndex=0;
+
   @override
-  // void didChangeDependencies() {
-  //   var args = ModalRoute.of(context) !.settings.arguments as Map;
-  //   print('passed index ${args["index"]}');
-  //   // TODO: implement didChangeDependencies
-  //   super.didChangeDependencies();
-  // }
+  void didChangeDependencies() {
+    if(ModalRoute.of(context)!.settings.arguments!=null){
+      var args = ModalRoute.of(context) !.settings.arguments as Map;
+      print('passed index ${args["index"]}');
+      ticketIndex = args ['index'];
+    }
+
+    super.didChangeDependencies();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppStyles.bgcolor,
       appBar: AppBar(
-        title: Center(child: Text('Ticket')),
+        title: const Center(child: Text('Ticket')),
       ),
       body: Stack(
         children: [
@@ -58,7 +64,7 @@ class _TicketScreenState extends State<TicketScreen> {
               Container(
                   padding: const EdgeInsets.only(left: 16),
                   child: TicketView(
-                    ticket: ticketList[0],
+                    ticket: ticketList[ticketIndex],
                     isColor: true,
                   ),),
               Container(
@@ -264,7 +270,7 @@ class _TicketScreenState extends State<TicketScreen> {
               Container(
                   padding: const EdgeInsets.only(left: 16),
                   child: TicketView(
-                    ticket: ticketList[0],
+                    ticket: ticketList[ticketIndex],
                     isColor: widget.isColor,
                   )),
             ],

@@ -72,8 +72,14 @@ List<Map<String, dynamic>> hotelList = [
   },
   {
     'image': 'pool_view.png',
-    'place': 'finest hotel in the city',
+    'place': 'finest hotel',
     'destination': 'Dubai',
+    'price': 68
+  },
+  {
+    'image': 'pool_view_1.png',
+    'place': 'finest place',
+    'destination': 'Nigeria',
     'price': 68
   },
 ];
